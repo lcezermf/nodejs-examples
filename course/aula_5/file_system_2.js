@@ -12,10 +12,21 @@ function mostrar_status(dir, file_name){
 }
 
 mostrar_status(__dirname, 'other');
-*/
 
 //exibe informações do arquivo em 'real-time'
+
 fs.watchFile('./message.txt', function(current, previous) {
   console.log(current);
   console.log(previous);
 });
+
+*/
+
+function deletar_arquivo(file){
+	fs.unlink(file, function(error){
+    if(error) throw error;
+    console.log(file + " apagado.");
+	});	
+}
+
+deletar_arquivo('arquivo.txt');
