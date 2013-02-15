@@ -1,0 +1,1120 @@
+Connecting to database specified by database.yml
+  [1m[36m (20.7ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (5.4ms)[0m  DELETE FROM `users`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-11-28 23:16:08', '2012-11-28 23:16:08')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-11-28 23:16:08', '2012-11-28 23:16:08')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `announcements`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 298486374)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 113629430)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 933434481)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 303968118)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `proposals`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `comments`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `sponsors`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `plans`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 221168073)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 276395349)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 733271808)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-11-28 23:16:08', '2012-11-28 23:16:08', 154997895)
+  [1m[36m (45.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.2ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.2ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (16.8ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-01 22:55:01', '2012-12-01 22:55:01', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-01 22:55:01', '2012-12-01 22:55:01', 298486374, 64810937)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-01 22:55:01', '2012-12-01 22:55:01')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-01 22:55:01', '2012-12-01 22:55:01')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (12.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 933434481)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 303968118)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 221168073)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 276395349)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 733271808)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-01 22:55:01', '2012-12-01 22:55:01', 154997895)[0m
+  [1m[35m (180.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.3ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-01 23:01:53', '2012-12-01 23:01:53', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-01 23:01:53', '2012-12-01 23:01:53', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-01 23:01:53', '2012-12-01 23:01:53')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-01 23:01:53', '2012-12-01 23:01:53')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 298486374)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 113629430)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 933434481)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 303968118)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 980190962)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 221168073)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-01 23:01:53', '2012-12-01 23:01:53', 154997895)[0m
+  [1m[35m (134.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.4ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-01 23:03:49', '2012-12-01 23:03:49', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-01 23:03:49', '2012-12-01 23:03:49', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-01 23:03:49', '2012-12-01 23:03:49')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-01 23:03:49', '2012-12-01 23:03:49')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 113629430)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 933434481)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 303968118)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 221168073)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 276395349)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 733271808)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-01 23:03:49', '2012-12-01 23:03:49', 154997895)[0m
+  [1m[35m (111.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.5ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-01 23:05:02', '2012-12-01 23:05:02', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-01 23:05:02', '2012-12-01 23:05:02', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-01 23:05:02', '2012-12-01 23:05:02')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-01 23:05:02', '2012-12-01 23:05:02')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 933434481)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 303968118)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (42.2ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 221168073)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-01 23:05:02', '2012-12-01 23:05:02', 154997895)[0m
+  [1m[35m (214.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.2ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (17.8ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-05 23:09:14', '2012-12-05 23:09:14', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-05 23:09:14', '2012-12-05 23:09:14', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-05 23:09:14', '2012-12-05 23:09:14')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-05 23:09:14', '2012-12-05 23:09:14')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 933434481)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 303968118)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 221168073)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 276395349)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 733271808)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-05 23:09:14', '2012-12-05 23:09:14', 154997895)[0m
+  [1m[35m (48.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.5ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-05 23:18:25', '2012-12-05 23:18:25', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-05 23:18:25', '2012-12-05 23:18:25', 298486374, 64810937)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-05 23:18:25', '2012-12-05 23:18:25')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-05 23:18:25', '2012-12-05 23:18:25')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 113629430)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 933434481)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 303968118)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-05 23:18:25', '2012-12-05 23:18:25', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-05 23:18:26', '2012-12-05 23:18:26', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-05 23:18:26', '2012-12-05 23:18:26', 221168073)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-05 23:18:26', '2012-12-05 23:18:26', 276395349)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-05 23:18:26', '2012-12-05 23:18:26', 733271808)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-05 23:18:26', '2012-12-05 23:18:26', 154997895)[0m
+  [1m[35m (94.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.2ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (26.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (4.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (6.9ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (19.1ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-17 16:41:25', '2012-12-17 16:41:25', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-17 16:41:25', '2012-12-17 16:41:25', 298486374, 64810937)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-17 16:41:25', '2012-12-17 16:41:25')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-17 16:41:25', '2012-12-17 16:41:25')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 298486374)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 113629430)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 933434481)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 303968118)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 221168073)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-17 16:41:25', '2012-12-17 16:41:25', 154997895)[0m
+  [1m[35m (46.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (15.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.2ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.1ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (87.7ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2012-12-17 17:02:51', '2012-12-17 17:02:51', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Segunda Foto', 'MyString', '2012-12-17 17:02:51', '2012-12-17 17:02:51', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2012-12-17 17:02:51', '2012-12-17 17:02:51')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2012-12-17 17:02:51', '2012-12-17 17:02:51')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 298486374)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 113629430)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 933434481)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 303968118)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 221168073)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2012-12-17 17:02:51', '2012-12-17 17:02:51', 154997895)[0m
+  [1m[35m (42.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.5ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.5ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:25', '2013-01-04 14:51:25', 980190962, 64810937)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `photos`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)[0m
+Mysql2::Error: Unknown column 'name' in 'field list': INSERT INTO `photos` (`name`, `image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('Primeira Foto', 'MyString', '2013-01-04 14:51:26', '2013-01-04 14:51:26', 980190962, 64810937)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('MyString', '2013-01-04 14:53:43', '2013-01-04 14:53:43', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `photos` (`image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('MyString', '2013-01-04 14:53:43', '2013-01-04 14:53:43', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2013-01-04 14:53:43', '2013-01-04 14:53:43')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2013-01-04 14:53:43', '2013-01-04 14:53:43')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 298486374)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 113629430)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 933434481)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 303968118)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 221168073)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2013-01-04 14:53:43', '2013-01-04 14:53:43', 154997895)[0m
+  [1m[35m (76.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.6ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.5ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `photos`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `photos` (`image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('MyString', '2013-01-04 14:58:03', '2013-01-04 14:58:03', 980190962, 64810937)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `photos` (`image`, `created_at`, `updated_at`, `id`, `announcement_id`) VALUES ('MyString', '2013-01-04 14:58:03', '2013-01-04 14:58:03', 298486374, 64810937)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (1, 'Luiz Cezer', 'lccezinha@gmail.com', 'batata', 1, '(45) 9985-8693', 1, 4, '2013-01-04 14:58:03', '2013-01-04 14:58:03')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`id`, `name`, `email`, `encrypted_password`, `role_id`, `phone`, `situation`, `plan_id`, `created_at`, `updated_at`) VALUES (2, 'Bazzinga JR', 'bazzing@hotmail.com', 'batat', 2, '(45) 9985-8693', 1, 1, '2013-01-04 14:58:03', '2013-01-04 14:58:03')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `announcements`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Um', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Dois', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 298486374)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Três', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 113629430)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quatro', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 933434481)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `announcements` (`name`, `content`, `value`, `category_id`, `city_id`, `situation`, `user_id`, `created_at`, `updated_at`, `id`) VALUES ('Anúncio Quinto', 'hahahaha', 250.0, 1, 1, 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 303968118)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `proposals`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `proposals` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `comments`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Cezinha Filho', 'lccezinha@gmail.com', 'hahaha esse foi muito bom', 0, 1, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `comments` (`name`, `email`, `content`, `situation`, `announcement_id`, `created_at`, `updated_at`, `id`) VALUES ('Luiz Marrone', 'marrone@gmail.com', 'hahaha esse foi muito bom', 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `sponsors`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `sponsors` (`name`, `content`, `image`, `url`, `situation`, `city_id`, `created_at`, `updated_at`, `id`) VALUES ('MArrone', 'FAÇA LA AS COISAS', 'MyString', 'http://www.google.com', 1, 2, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `plans`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('free', 5, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 221168073)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('basic', 10, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 276395349)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('pro', 20, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 733271808)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `plans` (`name`, `quantity`, `created_at`, `updated_at`, `id`) VALUES ('premium', 1000, '2013-01-04 14:58:03', '2013-01-04 14:58:03', 154997895)[0m
+  [1m[35m (76.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mAnnouncement Load (0.6ms)[0m  [1mSELECT `announcements`.* FROM `announcements` WHERE `announcements`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 221168073 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPlan Load (0.4ms)[0m  SELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 276395349 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT `plans`.* FROM `plans` WHERE `plans`.`id` = 733271808 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Batatinha JR' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'batata@gmail.com' LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK

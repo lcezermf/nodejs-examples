@@ -1,26 +1,22 @@
-var Geladeira      = require('./geladeira');
-var Liquidificador = require('./liquidificador');
-var Armario        = require('./armario');
+var DonaDeCasa = require('./dona_de_casa');
 
-var geladeira      = new Geladeira();
-var liquidificador = new Liquidificador();
-var armario        = new Armario();
+var dona_de_casa = new DonaDeCasa();
 
-//quando algo disparar o evento 'item disponivel', executa o callback
-geladeira.on('item disponivel', function(fruta){
-  console.log('item : ' + fruta);  
-  liquidificador.espremer(fruta);
+//escuta o evento e recebe o suco
+dona_de_casa.on('suco pronto', function(suco) {
+  console.log('suco de ' + suco + 'pronto e servido..');
 });
 
-liquidificador.on('espremido', function(suco) {
-  console.log('espremi o suco de ' + suco); 
-  armario.pegar_item('copo');    
-});
+dona_de_casa.fazer_suco('laranja')
 
-armario.on('item disponivel', function(copo) {
-  console.log('peguei o copo');
-  copo.servir(liquidificador.suco);
-});
+/* 
+  dispara o evento
+qualquer_coisa.emit('nome_evento')
 
+  escuta o evento
 
-geladeira.pegar_item('laranja');
+qualquer_coisa.on('nome_evento', function(arg) {
+  faz algo
+})
+
+*/
