@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>WebSocket</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id='mensagem'>
+		</div>
+	</body>
+
+	<script>
+		$(document).ready(function(){
+			var socket = new WebSocket("ws://localhost:8080/");
+
+			$('#mensagem').append("Conectado. STATE: %s <br />", socket.readyState)
+			
+			socket.onopen = function(){
+				$('#mensagem').append('Conectou. STATE %s', socket.readyState);
+			}
+
+			socket.onmessage = function(message) {
+				$('#mensagem').append('Mensagem: %s', message);
+			}
+
+			socket.onclose = function(){
+				$('#mensagem').append('Fechada'...);	
+			}
+
+		});
+	</script>
+
+<html>

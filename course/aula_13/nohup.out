@@ -1,0 +1,15 @@
+
+events.js:71
+        throw arguments[1]; // Unhandled 'error' event
+                       ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:770:11)
+    at Server._listen2 (net.js:910:14)
+    at listen (net.js:937:10)
+    at Server.listen (net.js:986:5)
+    at Function.app.listen (/home/cezinha/Desenvolvimento/NodeJS/course/aula_13/node_modules/connect/lib/proto.js:229:24)
+    at Object.<anonymous> (/home/cezinha/Desenvolvimento/NodeJS/course/aula_13/app.js:13:8)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
