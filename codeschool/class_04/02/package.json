@@ -1,0 +1,8 @@
+{
+	'name': 'My App',
+	'version': '1',
+	'dependencies': {
+		'connect': '1.8.7'
+	}
+}
+//run npm install
