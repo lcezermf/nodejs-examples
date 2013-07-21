@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>WTF</title>
+    <script src="/jquery.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var server = io.connect();
+
+        server.on('connect', function(data) {
+          nickname = prompt('Nick ?');
+          server.emit('join', nickname);
+        });
+
+        //quando server emitir o evento(messages)... executa
+        server.on('hello', function(data){
+          $("div#messages ul").append("<li>Moderação: " + data.hello + "</li>")
+        });
+
+        server.on('chat', function(data) {
+          alert("VISH");
+          $("div#messages ul").append("<li>" + data + "</li>")
+        });
+
+        $('#chat-form').submit(function(e){
+          var message = $("input[name='msg']").val();
+          //dispara o evento 'new-message'
+          server.emit('new-message', message)
+        });
+
+
+      });
+    </script>
+  </head>
+  <body>
+
+    <div id="messages">
+      <ul>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <form id="chat-form" method="get" action="/">
+        <input type="text" name="msg" />
+        <input type="submit" value="go" />
+      </form>
+    </div>
+
+  </body>
+</html>
