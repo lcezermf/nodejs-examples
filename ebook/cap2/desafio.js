@@ -8,12 +8,11 @@ var diretorio = function(arquivo){
 
 var rotear = function(pathname){
   var arquivo;
+
   if(pathname == '/' || pathname == '/artigos'){
-    arquivo = diretorio('artigos.html')
+    arquivo = diretorio('artigos.html');
   }else if(pathname == '/contato'){
-    arquivo = diretorio('contato.html')
-  }else{
-    arquivo = diretorio('erro.html')
+    arquivo = diretorio('contato.html');
   }
 
   if(fs.existsSync(arquivo))

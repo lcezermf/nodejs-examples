@@ -1,5 +1,5 @@
-var hello = require('./hello');
-var human = require('./human');
+var hello  = require('./hello');
+var pipoca = require('./human');
 
 hello('Hello NodeJS');
-human.hello('FALA AE NODE');
+pipoca.hello('FALA AE NODE');
