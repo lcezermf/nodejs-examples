@@ -4,9 +4,13 @@
  */
 
 var express = require('express')
+  , app = express()
   , load   = require('express-load')
   , error  = require('./middleware/errors')
-var app = express();
+  , server = require('http').createServer(app)
+  , io     = require('socket.io').listen(server)
+
+io.set('log level', 1);
 
 // all environments
 app.set('views', __dirname + '/views');
@@ -23,6 +27,16 @@ load('models')
   .then('routes')
   .into(app);
 
-app.listen(3000, function(){
+io.sockets.on('connection', function(client){
+  client.on('send-server', function(data){
+    var msg = "<b>" + data.name + ":</b> " + data.message + "<br />";
+    client.emit('send-client', msg);
+    client.broadcast.emit('send-client', msg);
+  });
+});
+
+
+
+server.listen(3000, function(){
   console.log("UP.");
-})
+});
