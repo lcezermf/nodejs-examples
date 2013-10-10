@@ -1,0 +1,29 @@
+<% include ../shared/header %>
+<script>
+  $(document).ready(function(){
+    var socket = io.connect('http://localhost:3000');
+
+    socket.on('send-client', function(msg) {
+      $('#chat').append(msg);
+    });
+
+    $('#enviar').click(function(){
+      var name = $('#name').val();
+      var msg  = $('#msg').val();
+      $('#msg').val('');
+      socket.emit('send-server', { name: name, message: msg });
+    });
+  });
+</script>
+<header>
+  <h3>Chat</h3>
+</header>
+<section>
+  <pre id="chat"></pre>
+  <input type="hidden" id="name" value="<%- user.name %>" />
+  <input type="text" id="msg" class="input-xxlarge" placeholder="Mensagem..." />
+  <button class="btn btn-info" id="enviar">Enviar</button>
+</section>
+
+<% include ../shared/exit %>
+<% include ../shared/footer %>
