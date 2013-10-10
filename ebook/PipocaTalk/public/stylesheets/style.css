@@ -3,6 +3,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
+div.container { margin: 0 auto; }
+
+div.container form.login-form { margin:0 auto; }

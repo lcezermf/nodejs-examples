@@ -1,0 +1,19 @@
+<% include ../shared/header %>
+<header>
+  <h2>Ntalk - Editar contato</h2>
+</header>
+<section>
+  <form action="/contacts/<%- id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label>Nome:</label>
+    <input type="text" name="contact[name]" value="<%- contact.name %>">
+ 
+     <label>E-mail:</label>
+      <input type="text" name="contact[email]" value="<%- contact.email %>">
+    <button type="submit">Atualizar</button>
+  </form>
+</section>
+<% include ../exit %>
+<% include ../footer %>
+<% include ../shared/exit %>
+<% include ../shared/footer %>

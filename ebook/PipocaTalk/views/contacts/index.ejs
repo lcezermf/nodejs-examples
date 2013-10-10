@@ -1,0 +1,33 @@
+<% include ../shared/header %>
+<header>
+  <h2>Ntalk - Agenda de contatos</h2>
+</header>
+<section>
+  <h3>Bem vindo: <%- user.name %></h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(contacts.length > 0) { %>
+        <% contacts.forEach(function(contact, index) { %>
+          <tr>
+            <td><%- contact.name %></td>
+            <td><%- contact.email %></td>
+            <td>
+              <a href="/contacts/<%- index %>">Detalhes</a>
+            </td>
+          </tr>
+        <% }) %>
+      <% } else { %>
+        <h4>No contacts</h4>
+      <% } %>
+    </tbody>
+  </table>
+</section>
+<% include ../shared/exit %>
+<% include ../shared/footer %>
