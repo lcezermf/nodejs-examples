@@ -8,10 +8,9 @@
     });
 
     $('#enviar').click(function(){
-      var name = $('#name').val();
       var msg  = $('#msg').val();
       $('#msg').val('');
-      socket.emit('send-server', { name: name, message: msg });
+      socket.emit('send-server', { message: msg });
     });
   });
 </script>
@@ -20,7 +19,6 @@
 </header>
 <section>
   <pre id="chat"></pre>
-  <input type="hidden" id="name" value="<%- user.name %>" />
   <input type="text" id="msg" class="input-xxlarge" placeholder="Mensagem..." />
   <button class="btn btn-info" id="enviar">Enviar</button>
 </section>

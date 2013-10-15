@@ -12,6 +12,12 @@ var express = require('express')
 
 io.set('log level', 1);
 
+const KEY = 'PipocaTalk.sid', SECRET = 'batata8';
+var cookie = express.cookieParser(SECRET)
+  , store = new express.session.MemoryStore()
+  , sessOpts =  { secret: SECRET, key: KEY, store: store }
+  , session = express.session(sessOpts);
+
 // all environments
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -22,20 +28,27 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(__dirname, 'public'));
 
+io.set('authorization', function(data, accept){
+  cookie = (data, {}, function(err){
+    var sessionID = data.signedCookies[KEY];
+    store.get(sessionID, function(err, session){
+      if(err || !session){
+        accept(null, false);
+      }else{
+        data.session = session;
+        accept(null, true);
+      }
+    });
+  });
+});
+
 load('models')
   .then('controllers')
   .then('routes')
   .into(app);
 
-io.sockets.on('connection', function(client){
-  client.on('send-server', function(data){
-    var msg = "<b>" + data.name + ":</b> " + data.message + "<br />";
-    client.emit('send-client', msg);
-    client.broadcast.emit('send-client', msg);
-  });
-});
-
-
+load('sockets')
+  .into(io);
 
 server.listen(3000, function(){
   console.log("UP.");
