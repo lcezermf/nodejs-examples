@@ -2,10 +2,21 @@ module.exports = function(io){
   var crypto = require('crypto')
     , md5 = crypto.createHash('md5')
     , sockets = io.sockets;
+
   sockets.on('connection', function(client){
     var session = client.handshake.session
       , user = session.user;
+    client.set('email', user.email);
     
+    var onlines = sockets.clients();
+    onlines.forEach(function(online){
+      var online = sockets.sockets[online.id];
+      online.get('email', function(err, email){
+        client.emit('notify-onlines', email);
+        client.broadcast.emit('notify-onlines', email);
+      });
+    });
+
     client.on('join', function(sala){
       if(sala){
         sala = sala.replace('?','');
@@ -31,26 +42,12 @@ module.exports = function(io){
 
     client.on('disconnect', function(){
       client.get('sala', function(err, sala){
+        var msg = "<b>" + user.name + ":</b> saiu da sala. <br />";
+        client.broadcast.emit('notify-offlines', user.email);
+        sockets.in(sala).emit('send-client', msg);
         client.leave(sala);
       })
     });
+
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
