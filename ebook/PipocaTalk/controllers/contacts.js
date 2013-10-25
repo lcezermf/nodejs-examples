@@ -15,6 +15,10 @@ module.exports = function(app){
       res.render('contacts/index', params);
     },
 
+    novo: function(req, res){
+      res.render('contacts/novo');
+    },
+
     create: function(req, res){
       var contact = req.body.contact;
       var user = req.session.user;

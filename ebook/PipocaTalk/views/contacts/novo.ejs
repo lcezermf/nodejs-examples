@@ -1,0 +1,17 @@
+<% include ../shared/header %>
+<header>
+  <h2>Ntalk - Novo contato</h2>
+</header>
+<section>
+  <form action="/contacts" method="post">
+    <label>Nome:</label>
+    <input type="text" name="contact[name]">
+ 
+    <label>E-mail:</label>
+    <input type="text" name="contact[email]">
+    <br />
+    <button type="submit" class="btn btn-info">ADD</button>
+  </form>
+</section>
+<% include ../shared/exit %>
+<% include ../shared/footer %>
